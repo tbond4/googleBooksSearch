@@ -1,8 +1,14 @@
 import React from "react"
 import SearchForm from "./components/SearchFrom"
 function searchPage(){
+
+    const [books, setBooks] = useState([])
+
 return(
-    <SearchForm/>
+    <div>
+    <SearchForm setBooks = {setBooks} />
+    <Results books={books}/>
+    </div>
 )
 }
 

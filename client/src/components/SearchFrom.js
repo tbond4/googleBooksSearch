@@ -1,13 +1,15 @@
 import React from "react"
 import {Form, Button} from "react-bootstrap"
 import API from "../utils/API";
-function SearchForm(){
+function SearchForm({setBooks}){
+
     const bookInput = useRef();
+
     const handleFromSubmit = event =>{
         event.preventDefault()
 
         API.getBooks(bookInput.current.value).then(({data}) =>{
-            
+            setBooks(data);
         })
 
 
