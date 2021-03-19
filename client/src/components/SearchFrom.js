@@ -8,7 +8,7 @@ function SearchForm({setBooks}){
     const handleFromSubmit = event =>{
         event.preventDefault()
 
-        API.getBooks(bookInput.current.value).then(({data}) =>{
+        API.getGoogleBooks(bookInput.current.value).then(({data}) =>{
             setBooks(data);
         })
 

@@ -9,5 +9,15 @@ router.post("/books", (req,res)=>{
     }).then(savedBook =>{res.json(savedBook)})
 });
 
-router.get("")
+router.get("/books",(req,res)=>{
+    Book.find().then((books)=>{
+        res.json(books)
+    })
+});
+
+router.delete("/books/:id",(req,res)=>{
+    Book.findByIdAndDelete(req.params.id).then(()=>{
+        res.json(res)
+    })
+})
 module.exports=router;
