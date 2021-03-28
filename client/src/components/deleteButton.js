@@ -4,12 +4,12 @@ import API from "../utils/API"
 
 
 
-function DeleteButton({bookId }){
+function DeleteButton({bookId, getBooks }){
 
     const deleteBook = () => {
 
         API.deleteBook(bookId).then(()=>{
-
+             return getBooks();
         }).catch((err)=>{
             console.log(err.response.data)
         })

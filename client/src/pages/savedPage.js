@@ -1,22 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import { useEffect } from "react";
-import savedResults from "../components/savedResults";
+import SavedResults from "../components/savedResults";
 import API from "../utils/API";
-import SearchForm from "./components/SearchFrom"
+
 
 
 function savedPage(){
 
     const [books,setBooks]=useState([]);
 
-    useEffect(()=>{
-        API.getBooks().then(({data})=>{
+    const getBooks = ()=>{
+       return API.getBooks().then(({data})=>{
+           console.log(data)
             setBooks(data)
+            
         });
+    }
+    useEffect(()=>{
+        getBooks()
     },[setBooks])
 
     return(
-        <savedResults books={books}/>
+        
+            
+        <SavedResults books={books} getBooks={getBooks}/>
+        
 )
 }
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import {Form, Button} from "react-bootstrap"
 import API from "../utils/API";
 function SearchForm({setBooks}){
@@ -9,7 +9,8 @@ function SearchForm({setBooks}){
         event.preventDefault()
 
         API.getGoogleBooks(bookInput.current.value).then(({data}) =>{
-            setBooks(data);
+          console.log(data)
+            setBooks(data.items);
         })
 
 

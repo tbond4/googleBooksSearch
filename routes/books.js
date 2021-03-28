@@ -1,5 +1,5 @@
 const Router = require("express").Router
-const {Book}=require("..models");
+const {Book}=require("../models");
 const router=Router();
 
 router.post("/books", (req,res)=>{
@@ -17,7 +17,7 @@ router.get("/books",(req,res)=>{
 
 router.delete("/books/:id",(req,res)=>{
     Book.findByIdAndDelete(req.params.id).then(()=>{
-        res.json(res)
+        res.end()
     })
 })
 module.exports=router;

@@ -17,6 +17,7 @@ function App () {
       <Switch>
         <Route exact path="/" component={searchPage}/>
         <Route exact path="/saved" component={savedPage}/>
+        <Route exact path="/search" component={searchPage}/>
         <Route component={notFoundPage}/>
       </Switch>
       </Router>

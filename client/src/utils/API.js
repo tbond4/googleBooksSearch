@@ -8,9 +8,12 @@ const API = {
     async saveBook(book){
         return(axios.post("/api/books",book))
     },
-    async getGoogleBooks(){
-
+    //AIzaSyBthT17GYlPMfJOuj3E1Oj2wKCWQn2cW7g
+    async getGoogleBooks(book){
+        console.log(book)
+        return(axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}`));
     },
+    // ${book}
     async deleteBook(bookid){
         return(axios.delete(`/api/books/${bookid}`))
 

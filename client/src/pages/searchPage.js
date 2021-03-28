@@ -1,5 +1,6 @@
-import React from "react"
-import SearchForm from "./components/SearchFrom"
+import React, { useState } from "react"
+import Results from "../components/Results";
+import SearchForm from "../components/SearchForm"
 function searchPage(){
 
     const [books, setBooks] = useState([])
