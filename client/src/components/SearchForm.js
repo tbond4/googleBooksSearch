@@ -19,7 +19,7 @@ function SearchForm({setBooks}){
     }
 
     return(
-    <Form onSubmit={handleFromSubmit}>
+    <Form  style={{backgroundColor:"lightblue",marginTop:"0"}} onSubmit={handleFromSubmit}>
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Search Book</Form.Label>
           <Form.Control ref={bookInput} type="text" placeholder="Title" />

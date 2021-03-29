@@ -3,7 +3,7 @@ import {Jumbotron, Container} from "react-bootstrap"
 
 function Header(){
     return(
-    <Jumbotron fluid>
+    <Jumbotron fluid style={{backgroundColor:"lightgreen",marginBottom:"0"}}>
         <Container>
           <h1>Google Books</h1>
           <p>

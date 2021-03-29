@@ -17,7 +17,7 @@ function savedResults({books, getBooks}){
       <Card.Text>
         {book.description}
       </Card.Text>
-     <Button href={book.link}>Visit on Google</Button>
+     <Button stlye={{margin:"3%"}} href={book.link}>Visit on Google</Button>
      <DeleteButton bookId={book._id} getBooks={getBooks}/>
     </Card.Body>
   </Card>
